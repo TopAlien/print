@@ -8,8 +8,18 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@antv/g2plot": "^2.4.20",
+    "@types/html2canvas": "^1.0.0",
+    "@types/jspdf": "^2.0.0",
+    "async": "3.2.0",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
+    "officegen": "^0.6.3",
+    "print-js": "^1.6.0",
+    "print-this": "^1.16.0",
+    "vue": "^2.6.11",
+    "vue-plugin-hiprint": "^0.0.30"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.13",

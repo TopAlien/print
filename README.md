@@ -1,4 +1,9 @@
 # vue2-test
+## Logit
+option + L
+
+## delete Logit
+option + shift + L
 
 ## Project setup
 ```
