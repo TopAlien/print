@@ -1,19 +1,30 @@
 <template>
-
+  <div>
+    <div id="containerLine"></div>
+  </div>
 </template>
 
 <script>
-import { Line } from '@antv/g2plot';
+import {Line} from '@antv/g2plot';
 
 export default {
-  name: "Line",
   props: ['data'],
+  data() {
+    return {
+      line: null
+    }
+  },
   created() {
-    this.init()
+    this.$nextTick(() => this.init())
+  },
+  watch: {
+    'data'() {
+      this.line.update({data: this.data})
+    }
   },
   methods: {
     init() {
-      const line = new Line('container', {
+      this.line = new Line('containerLine', {
         data: this.data,
         padding: 'auto',
         xField: 'Date',
@@ -24,12 +35,8 @@ export default {
         },
       });
 
-      line.render();
+      this.line.render();
     }
   }
 }
 </script>
-
-<style scoped>
-
-</style>

@@ -12,22 +12,22 @@
 </template>
 
 <script>
-import { Bar } from '@antv/g2plot'
+import {Bar} from '@antv/g2plot'
 
 export default {
   props: ['id', 'data'],
   data() {
-    return{
+    return {
       isRender: false,
       bar: null
     }
   },
-  mounted() {
-    this.init()
+  created() {
+    this.$nextTick(() => this.init())
   },
   watch: {
     'data'() {
-      this.bar.update({ data: this.data })
+      this.bar.update({data: this.data})
     }
   },
   methods: {

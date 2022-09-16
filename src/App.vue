@@ -26,6 +26,7 @@ export default {
   },
   methods: {
     printCon() {
+      this.$message.loading('正在加载打印中...')
       this.printPageVisible = true
     },
     toPdf() {
