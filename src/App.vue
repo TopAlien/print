@@ -26,12 +26,11 @@ export default {
   },
   methods: {
     printCon() {
-      this.$message.loading('正在加载打印中...')
+      this.$message.loading('正在加载打印中...', 0)
       this.printPageVisible = true
     },
     toPdf() {
       var doc = new jsPDF({ format: 'a4', compress: true })
-
 
       doc.setFontSize(40)
       doc.text('Octonyan loves jsPDF', 35, 25)

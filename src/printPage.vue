@@ -424,7 +424,7 @@ export default {
             })
             this.$message.destroy()
             this.$emit('update:visible', false)
-          }, 600)
+          }, 500)
         }
       }, 300)
 
