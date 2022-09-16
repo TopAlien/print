@@ -6,9 +6,7 @@
  * @Description  : 请填写简介
 -->
 <template>
-  <div>
-    <div :id='`bar${id}`'></div>
-  </div>
+  <div :id='`bar${id}`' style="height: 30em; width: 30em;"></div>
 </template>
 
 <script>
@@ -34,9 +32,6 @@ export default {
     init() {
       this.bar = new Bar(`bar${this.id}`, {
         data: this.data,
-        autoFit: true,
-        width: 600,
-        height: 300,
         xField: 'value',
         yField: 'year',
         tooltip: false,

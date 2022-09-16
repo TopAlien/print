@@ -1,12 +1,20 @@
 <template>
   <div id="printContainer">
     <div class="barWrap">
-      <Bar id="bar1" :data="data1" key="1"/>
-      <Bar id="bar2" :data="data2" key="2"/>
+      <div >
+        <Bar id="bar1" :data="data1" key="1"/>
+      </div>
+      <div >
+        <Bar id="bar2" :data="data2" key="2"/>
+      </div>
     </div>
     <h1>table 哇咔咔</h1>
     <div>哇咔咔</div>
-    <Bar id="bar3" :data="data3" key="3"/>
+    <div>
+      <div class="resp_wrap">
+        <Bar id="bar3" :data="data3" key="3"/>
+      </div>
+    </div>
     <div class="user">
       <p>name: ealien</p>
       <p>oName: nuomi</p>
@@ -423,6 +431,8 @@ export default {
               header: '哇咔咔header'
             })
             this.$message.destroy()
+            clearInterval(this.timer)
+            this.timer = null
             this.$emit('update:visible', false)
           }, 500)
         }
@@ -489,4 +499,5 @@ export default {
   position: absolute;
   top: -9999px;
 }
+
 </style>
